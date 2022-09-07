@@ -10,29 +10,59 @@ public class Menu1 implements ActionListener {
     JMenuBar pasekMenu;
     JMenu plik;
     JMenu edycja;
+    JMenu pomoc;
     JMenuItem nowy;
     JMenuItem wytnij;
+    JMenuItem koniec;
+    JMenuItem help;
 
     public JPanel createContentPane(){
         JPanel mojpanel = new JPanel();
 
         pasekMenu = new JMenuBar();
 
-        plik = new JMenu("FILE");
-        edycja = new JMenu("EDIT");
+        plik = new JMenu("File");
+        edycja = new JMenu("Edit");
+        pomoc = new JMenu("Help");
 
-        nowy = new JMenuItem("NEW");
+        nowy = new JMenuItem("New");
         nowy.addActionListener(this);
         plik.add(nowy);
 
-        wytnij = new JMenuItem("CUT");
+        koniec = new JMenuItem("Exit");
+        koniec.addActionListener(this);
+        plik.add(koniec);
+
+        wytnij = new JMenuItem("Cut");
+        wytnij.addActionListener(this);
         edycja.add(wytnij);
+
+        help = new JMenuItem("Info");
+        help.addActionListener(this);
+        pomoc.add(help);
 
         pasekMenu.add(plik);
         pasekMenu.add(edycja);
+        pasekMenu.add(pomoc);
         return mojpanel;
     }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
 
+        if (command.equals("Info"))
+          JOptionPane.showMessageDialog(null,
+                  "Wersja programu 1.00",
+                  "Info",
+                  JOptionPane.INFORMATION_MESSAGE);
+        else
+        if (command.equals("Exit")) System.exit(0);
+          else
+            JOptionPane.showMessageDialog(null,
+                   "Wybrano " + command,
+                    command,
+                    JOptionPane.ERROR_MESSAGE);
+    }
     public Menu1() {
 
         JFrame frame = new JFrame("Pierwsze menu aplikacji");
@@ -53,8 +83,5 @@ public class Menu1 implements ActionListener {
             new Menu1();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-    }
 }
