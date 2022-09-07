@@ -10,5 +10,5 @@ public class KlasaFile {
         System.out.println("Nazwa: "+ plik.getName());
         System.out.println("PATH: "+ plik.getPath());
         System.out.println(plik.delete());
-            }
+    }
 }
