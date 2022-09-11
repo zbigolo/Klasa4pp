@@ -1,4 +1,4 @@
-package PO_1_OdczytPliku;
+package PO_2_OdczytPliku;
 
 import java.io.File;
 import java.io.FileInputStream;

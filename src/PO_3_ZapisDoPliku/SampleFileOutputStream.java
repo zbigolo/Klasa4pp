@@ -1,4 +1,4 @@
-package PO_2_ZapisDoPliku;
+package PO_3_ZapisDoPliku;
 
 import java.io.File;
 import java.io.FileInputStream;
