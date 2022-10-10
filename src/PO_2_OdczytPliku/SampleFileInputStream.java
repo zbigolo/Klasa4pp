@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class SampleFileInputStream {
     public static void main (String[] args) throws IOException {
-        File plik = new File("filmy.txt");
+        File plik = new File("film.mkv");
 
         FileInputStream odczyt = null;
         try {

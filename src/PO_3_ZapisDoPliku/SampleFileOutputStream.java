@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class SampleFileOutputStream {
     public static void main(String[] args) throws IOException {
-        File plikdanych = new File("filmy.txt");
-        File plikkopii = new File("kopia.txt");
+        File plikdanych = new File("save.png");
+        File plikkopii = new File("savekopia.png");
 
         FileInputStream odczyt = null;
         FileOutputStream zapis = null;
@@ -20,6 +20,7 @@ public class SampleFileOutputStream {
             int bit = 0;
             while((bit = odczyt.read()) != -1){
                 zapis.write(bit);
+              //  System.out.print(bit);
             }
 
         }catch(IOException e){

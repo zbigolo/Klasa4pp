@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class SampleFileReader {
     public static void main (String[] args) throws IOException {
-        File plik = new File(".\\src\\PO_1_OdczytPliku\\SampleFileReader.java");
+        File plik = new File(".\\src\\PO_2_OdczytPliku\\SampleFileReader.java");
         FileReader odczyt = null;
 
         try {
